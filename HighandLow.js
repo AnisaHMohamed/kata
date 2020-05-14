@@ -6,23 +6,8 @@
 //highAndLow("1 2 -3 4 5"); // return "5 -3"
 //highAndLow("1 9 3 4 -5"); // return "9 -5"
 
-
-
 const highAndLow = (numbers) => {
   // ...
- const numArray =  numbers.split(' ');
- let minNum = numArray[0];
- let maxNum  = numArray[0];
- 
- 
- numArray.forEach(num=>{
-   let parsedNum = parseInt(num)
-   if(maxNum < parsedNum) {
-     maxNum = parsedNum
-     }
-   if(minNum > parsedNum) {
-      minNum = parsedNum
-     }
-   })
- return (`${maxNum} ${minNum}`)
-}
+  const numbersSplit = numbers.split(" "); //creates an array of numbers
+  return `${Math.max(...numbersSplit)} ${Math.min(...numbersSplit)}`; //find max and minimun number of the arrays
+};
