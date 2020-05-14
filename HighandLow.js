@@ -11,8 +11,9 @@
 const highAndLow = (numbers) => {
   // ...
  const numArray =  numbers.split(' ');
- let minNum = 0;
- let maxNum  = 0;
+ let minNum = numArray[0];
+ let maxNum  = numArray[0];
+ 
  
  numArray.forEach(num=>{
    let parsedNum = parseInt(num)
